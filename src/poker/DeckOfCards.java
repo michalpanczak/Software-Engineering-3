@@ -59,7 +59,7 @@ public class DeckOfCards {
 		discardPile--;
 	}
 
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		DeckOfCards deck = new DeckOfCards();
 		deck.shuffle();
 		
@@ -85,6 +85,7 @@ public class DeckOfCards {
 			}
 			}
 	}
+	*/
 }
 
 
