@@ -3,7 +3,7 @@ package poker;
 
 import java.util.Random;
 
-public class DeckOfCards {
+	public class DeckOfCards {
 	private PlayingCard deck[] = new PlayingCard[PlayingCard.SIZE_OF_DECK];			//Initialize array of cards.
 	private int topOfDeck = 51;
 	private int discardPile = 51;
@@ -23,7 +23,7 @@ public class DeckOfCards {
 
 	}
 	
-	public void shuffle(){											//Pick two random spaces in the array and swap them, do this 52^2 times.
+	public synchronized void shuffle(){											//Pick two random spaces in the array and swap them, do this 52^2 times.
 		for(int i = 1;i <= 52*52; i++){
 			Random rn = new Random();
 			int swap1 = rn.nextInt(52);
@@ -34,7 +34,7 @@ public class DeckOfCards {
 		}
 	}
 	
-	public void reset(){											//Reinitializes and reshuffles the deck.
+	public synchronized void reset(){											//Reinitializes and reshuffles the deck.
 		DeckOfCards newDeck = new DeckOfCards(); 
 		newDeck.shuffle();
 		deck = newDeck.deck;

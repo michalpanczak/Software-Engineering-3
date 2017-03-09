@@ -52,7 +52,7 @@ public class PlayingCard {
 		return cardSuit;
 	}
 	
-	public int getGameValue(){			//Allows user to see game value of card.
+	public int getGameValueOfCard(){			//Allows user to see game value of card.
 		return gameValue;
 	}
 	
